@@ -1,11 +1,11 @@
-struct Wordwall {
+pub struct Wordwall {
     score: u8,
     time: u16,
     name: String,
     ids: Ids,
 }
 
-struct Ids {
+pub struct Ids {
     activity: u32,
     template: u8,
 }
