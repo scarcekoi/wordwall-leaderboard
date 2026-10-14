@@ -1,1 +1,1 @@
-# Wordwall Fake POST Request
+# Wordwall Fake POST Request Creator (wordwall-leaderboard)
