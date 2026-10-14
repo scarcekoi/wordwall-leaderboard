@@ -22,7 +22,7 @@ fn construct_post_request(wdata: &Wordwall) {
     let mut data = data.as_bytes();
 
     let mut easy = Easy::new();
-    easy.url(format!("https://wordwall.net/resource/{}", wdata.ids.activity).as_str())
+    easy.url("https://wordwall.net/leaderboardajax/addentry")
         .unwrap();
     easy.post(true).unwrap();
     easy.post_field_size(data.len() as u64).unwrap();
