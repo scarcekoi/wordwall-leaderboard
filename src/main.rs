@@ -7,7 +7,7 @@ mod models;
 
 fn main() {}
 
-fn construct_post_request(wdata: &Wordwall) {
+fn leaderboard_entry_constructor(wdata: &Wordwall) {
     let data: String = "score=".to_string()
         + wdata.score.to_string().as_str()
         + "&time="
