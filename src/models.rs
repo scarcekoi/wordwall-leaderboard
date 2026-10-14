@@ -1,3 +1,4 @@
+/// The info about the leaderboard entry.
 pub struct Wordwall {
     /// The score of the leaderboard entry.
     pub score: u8,
