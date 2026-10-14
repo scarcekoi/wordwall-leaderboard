@@ -11,3 +11,4 @@ keywords = ["cli"]
 categories = ["command-line-utilities"]
 
 [dependencies]
+curl = "0.4.51"
