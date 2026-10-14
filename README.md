@@ -1,4 +1,4 @@
-`wordwall_leaderboard` is a tool for creating leaderboard entries on [Wordwall](https://wordwall.net).
+`wordwall-leaderboard` is a tool for creating leaderboard entries on [Wordwall](https://wordwall.net).
 
 # Examples
 
