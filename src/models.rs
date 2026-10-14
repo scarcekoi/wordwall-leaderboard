@@ -1,9 +1,9 @@
 /// The info about the leaderboard entry.
 pub struct Wordwall {
     /// The score of the leaderboard entry.
-    pub score: u64,
+    pub score: u32,
     /// The time of the leaderboard entry in milliseconds.
-    pub time: u64,
+    pub time: u32,
     pub name: String,
     pub ids: Ids,
 }
