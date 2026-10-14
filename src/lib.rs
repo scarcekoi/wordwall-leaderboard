@@ -1,13 +1,11 @@
 use curl::easy::Easy;
 use std::io::Read;
 
-use crate::models::{Ids, Wordwall};
+use crate::models::Wordwall;
 
 mod models;
 
-fn main() {}
-
-fn leaderboard_entry_constructor(wdata: &Wordwall) {
+fn leaderboard_entry_constructor(wdata: Wordwall) {
     let data: String = "score=".to_string()
         + wdata.score.to_string().as_str()
         + "&time="
