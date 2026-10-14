@@ -7,6 +7,7 @@ pub struct Wordwall {
     pub ids: Ids,
 }
 
+/// The IDs needed for creating the leaderboard entry.
 pub struct Ids {
     pub activity: u32,
     pub template: u8,
