@@ -12,7 +12,7 @@
 //!     score: 60,
 //!     time: 10000,
 //!     name: "John Smith".to_string(),
-//!     ids: ids,
+//!     ids,
 //! };
 //!
 //! leaderboard_entry_constructor(ww);
