@@ -1,6 +1,6 @@
 pub struct Wordwall {
     pub score: u8,
-    pub time: u16,
+    pub time: u32,
     pub name: String,
     pub ids: Ids,
 }
