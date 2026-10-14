@@ -25,7 +25,7 @@ use crate::models::Wordwall;
 
 pub mod models;
 
-pub fn leaderboard_entry_constructor(wdata: Wordwall) {
+pub fn build_leaderboard_entry_payload(wdata: Wordwall) {
     let data: String = "score=".to_string()
         + wdata.score.to_string().as_str()
         + "&time="
@@ -37,14 +37,16 @@ pub fn leaderboard_entry_constructor(wdata: Wordwall) {
         + "&templateId="
         + wdata.ids.template.to_string().as_str();
 
-    let mut data = data.as_bytes();
+    let data = data.as_bytes();
 
     let mut easy = Easy::new();
     easy.url("https://wordwall.net/leaderboardajax/addentry")
         .unwrap();
     easy.post(true).unwrap();
     easy.post_field_size(data.len() as u64).unwrap();
+}
 
+pub fn post_leaderboard_entry(mut data: &[u8], mut easy: Easy) {
     let mut transfer = easy.transfer();
     transfer
         .read_function(|buf| Ok(data.read(buf).unwrap_or(0)))
