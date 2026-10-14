@@ -1,11 +1,11 @@
 pub struct Wordwall {
-    score: u8,
-    time: u16,
-    name: String,
-    ids: Ids,
+    pub score: u8,
+    pub time: u16,
+    pub name: String,
+    pub ids: Ids,
 }
 
 pub struct Ids {
-    activity: u32,
-    template: u8,
+    pub activity: u32,
+    pub template: u8,
 }
