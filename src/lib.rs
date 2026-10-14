@@ -52,6 +52,7 @@ pub fn leaderboard_entry_constructor(wdata: Wordwall) {
     transfer.perform().unwrap();
 }
 
+/// Converts a [`u32`] to a [`String`] that has leading 0s to the 5-character mark.
 pub fn fix_time(time: u32) -> String {
     if time > 99999 {
         eprintln!("time is too high");
