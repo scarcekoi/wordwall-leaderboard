@@ -59,7 +59,7 @@ pub fn post_leaderboard_entry(data: String, mut easy: Easy) {
 }
 
 /// Converts a [`u32`] to a [`String`] that has leading 0s to the 5-character mark.
-pub fn fix_time(time: u32) -> String {
+pub fn fix_time(time: u64) -> String {
     if time > 99999 {
         eprintln!("time is too high");
     }
