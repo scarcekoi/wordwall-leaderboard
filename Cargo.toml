@@ -2,6 +2,7 @@
 name = "wordwall-leaderboard"
 version = "0.1.0"
 edition = "2024"
+description = "A tool for creating leaderboard entries on Wordwall."
 readme = "README.md"
 homepage = "https://github.com/scarcekoi/wordwall-leaderboard"
 repository = "https://github.com/scarcekoi/wordwall-leaderboard"
