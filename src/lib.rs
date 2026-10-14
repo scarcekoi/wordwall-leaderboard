@@ -29,7 +29,7 @@ pub fn build_leaderboard_entry_payload(wdata: Wordwall) -> (String, Easy) {
     let data: String = "score=".to_string()
         + wdata.score.to_string().as_str()
         + "&time="
-        + fix_time(wdata.time).as_str()
+        + wdata.time.to_string().as_str()
         + "&name="
         + wdata.name.as_str()
         + "&activityId="
@@ -56,13 +56,4 @@ pub fn post_leaderboard_entry(data: String, mut easy: Easy) {
         .read_function(|buf| Ok(data.read(buf).unwrap_or(0)))
         .unwrap();
     transfer.perform().unwrap();
-}
-
-/// Converts a [`u32`] to a [`String`] that has leading 0s to the 5-character mark.
-pub fn fix_time(time: u64) -> String {
-    if time > 99999 {
-        eprintln!("time is too high");
-    }
-
-    format!("{:0width$}", time, width = 5)
 }
