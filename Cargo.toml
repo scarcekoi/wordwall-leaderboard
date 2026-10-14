@@ -1,0 +1,13 @@
+[package]
+name = "wordwall-fake-post-request"
+version = "0.1.0"
+edition = "2024"
+readme = "README.md"
+homepage = "https://github.com/scarcekoi/wordwall-fake-post-request"
+repository = "https://github.com/scarcekoi/wordwall-fake-post-request"
+license = "MIT"
+license-file = "LICENSE"
+keywords = ["cli"]
+categories = ["command-line-utilities"]
+
+[dependencies]
