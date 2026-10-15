@@ -3,19 +3,29 @@
 //! # Examples
 //!
 //! ```
-//! let ids = Ids {
-//!     activity: 2470189,
-//!     template: 2,
+//! use wordwall_leaderboard::{
+//!     build_leaderboard_entry_payload,
+//!     models::{Ids, Wordwall},
+//!     post_leaderboard_entry,
 //! };
 //!
-//! let ww = Wordwall {
-//!     score: 60,
-//!     time: 10000,
-//!     name: "John Smith".to_string(),
-//!     ids,
-//! };
+//! fn main() {
+//!     let ids = Ids {
+//!         activity: 2470189,
+//!         template: 2,
+//!     };
 //!
-//! leaderboard_entry_constructor(ww);
+//!     let ww = Wordwall {
+//!         score: u32::MAX - 2147483649,
+//!         time: 10000,
+//!         name: "John Smith".to_string(),
+//!         ids,
+//!     };
+//!
+//!     let (data, easy) = build_leaderboard_entry_payload(ww);
+//!
+//!     post_leaderboard_entry(data, easy);
+//! }
 //! ```
 
 use curl::easy::Easy;
